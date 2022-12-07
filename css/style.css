@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+.over-page{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 4;
+    background-color:rgba(206, 193, 193, 0.452);
+    width:100%;
+    height:100%;
+    text-align: center;
+}
+.over-page span{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50px,-50px);
+    background-color: #f33e66;
+    color:#fff;
+    font-size: 40px;
+    padding:15px;
+    cursor:pointer;
+}
+.info{
+    width:1080px;
+    border:1px solid blue;
+    margin:auto;
+    padding:15px;
+    display: flex;
+    justify-content: space-between;
+}
+.time{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    flex-wrap:wrap;
+    width:1010px;
+    padding:35px;
+    margin:auto;
+}
+.container.stop-click{
+    pointer-events: none;
+}
+.block{
+    height:200px;
+    line-height: 200px;
+    transition:transform .5s;
+    transform-style: preserve-3d;
+    cursor:pointer;
+    position:relative;
+    flex:1 0 200px;
+    margin:0 10px 20px;
+}
+
+.block.is-flipped,
+.opened{
+    transform:rotatey(180deg);
+}
+.face{
+    text-align: center;
+    font-size:60px;
+    font-weight:600;
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+    color:#fff;
+}
+.front{
+    background-color:#333;
+    line-height: 200px;
+}
+.back{
+    background-color:#f33e66;
+    transform: rotateY(180deg);
+}
+.block[data-icons=letera] .back{
+    background-color: rgb(19, 184, 115);
+}
+.block[data-icons=bootstrap] .back{
+    background-color: rgb(247, 243, 28);
+}
+.block[data-icons=css] .back{
+    background-color: rgb(247, 169, 25);
+}
+.block[data-icons=apple] .back{
+    background-color: #FF6363;
+}
+.block[data-icons=html5] .back{
+    background-color: rgb(42, 56, 252);
+}
+.block[data-icons=ios] .back{
+    background-color: rgb(73, 1, 190);
+}
+.block[data-icons=and] .back{
+    background-color: rgb(165, 19, 184);
+}
+.block[data-icons=js] .back{
+    background-color: #FFBBBB;
+}
+.block[data-icons=py] .back{
+    background-color: #f33e66;
+}
+.block[data-icons=php] .back{
+    background-color: #8F384D;
+}
